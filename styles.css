@@ -1,0 +1,144 @@
+body {
+    background-color: rgb(2, 2, 62);
+    color: rgb(248, 248, 201);
+    margin: 0 auto;
+  }
+  
+  form {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+  }
+  
+  h1,
+  p,
+  legend {
+    text-align: center;
+  
+  }
+  
+  .contact div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  .service div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  .aboutYou {
+    display: grid;
+    grid-template-columns: 1fr 1fr1fr 1fr 1fr;
+  }
+  
+  .aboutYou input,
+  .aboutYou label {
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  fieldset {
+    margin: 20px 15%;
+  }
+  
+  select {
+    display: flex;
+    margin: 0 auto;
+    width: 250px;
+  }
+  
+  fieldset {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  fieldset:hover {
+    background-color: rgb(35, 35, 104);
+    /* Darker shade on hover */
+    transform: scale(1.02);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  
+  
+  textarea {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    height: 100px;
+  }
+  
+  button {
+    display: flex;
+    margin: 20px auto;
+    padding: 15px 10%;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    background-color: rgb(158, 158, 185);
+    color: rgb(66, 66, 231);
+    cursor: pointer;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: rgb(0, 123, 255);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  #loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid rgb(0, 123, 255);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    form {
+      width: 95%;
+    }
+  
+    .contact div,
+    .service div {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .aboutYou {
+      grid-template-columns: 1fr;
+    }
+  }
